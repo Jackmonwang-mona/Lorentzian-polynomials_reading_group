@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/sitemap.xml
