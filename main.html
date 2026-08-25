@@ -79,7 +79,7 @@
               </div>
               <div>
                 <dt>Time</dt>
-                <dd>Sunday 9:00 AM</dd>
+                <dd>Sunday 9:00-10:30 AM</dd>
               </div>
               <div>
                 <dt>Place</dt>
@@ -201,63 +201,113 @@
             <p>Sundays · 9:00–10:30 AM · Zoom Online Meeting</p>
           </div>
 
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">Date</th>
-                  <th scope="col">Presenter</th>
-                  <th scope="col">Topic</th>
-                  <th scope="col">Reading</th>
-                  <th scope="col">Status</th>
-                </tr>
-              </thead>
-              <!-- EDIT HERE 9: Copy or delete one entire <tr> block per meeting. -->
-              <tbody>
-                <tr>
-                  <td>Feb 5</td>
-                  <td>Whole group</td>
-                  <td>Orientation and project questions</td>
-                  <td><a href="materials/index.html">Project brief</a></td>
-                  <td><span class="status status-complete">Complete</span></td>
-                </tr>
-                <tr>
-                  <td>Feb 19</td>
-                  <td>Marcus</td>
-                  <td>Foundational material</td>
-                  <td><a href="materials/week-01-notes.md">Week 1 notes</a></td>
-                  <td><span class="status status-complete">Complete</span></td>
-                </tr>
-                <tr>
-                  <td>Feb 26</td>
-                  <td>Marcus</td>
-                  <td>The logical chain from Lemma 2.8 and 2.9 to Theorem 2.13</td>
-                  <td><a href="materials/index.html#reading-list">Chapter 2</a></td>
-                  <td><span class="status status-complete">Complete</span></td>
-                </tr>
-                <tr>
-                  <td>Mar 5</td>
-                  <td>Marcus</td>
-                  <td>Finish presenting Chapter 2.1</td>
-                  <td><a href="materials/index.html#reading-list">Notes §3</a></td>
-                  <td><span class="status status-complete">Complete</span></td>
-                </tr>
-                <tr>
-                  <td>Mar 12</td>
-                  <td>Ivy</td>
-                  <td>First half of Chapter 2.2</td>
-                  <td><a href="materials/index.html#reading-list">Chapter 2.2</a></td>
-                  <td><span class="status status-next">Next</span></td>
-                </tr>
-                <tr>
-                  <td>Mar 19</td>
-                  <td>Ivy</td>
-                  <td>Second half of Chapter 2.2</td>
-                  <td><a href="materials/index.html#reading-list">Chapter 2.2</a></td>
-                  <td><span class="status status-planned">Planned</span></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="weekly-plan">
+            <input
+              type="checkbox"
+              id="weekly-plan-control"
+              class="weekly-plan-checkbox"
+              aria-label="Show or hide the remaining meetings"
+            >
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Presenter</th>
+                    <th scope="col">Topic</th>
+                    <th scope="col">Reading</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <!-- The first three rows are always visible. -->
+                  <tr>
+                    <td>Mar 12</td>
+                    <td>Ivy</td>
+                    <td>First half of Chapter 2.2</td>
+                    <td>
+                      <a href="materials/index.html#reading-list">Chapter 2.2</a>
+                    </td>
+                    <td>
+                      <span class="status status-next">Next</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Mar 19</td>
+                    <td>Ivy</td>
+                    <td>Second half of Chapter 2.2</td>
+                    <td>
+                      <a href="materials/index.html#reading-list">Chapter 2.2</a>
+                    </td>
+                    <td>
+                      <span class="status status-planned">Planned</span>
+                    </td>
+                  </tr>
+
+                  <!-- Rows with class="extra-row" are initially hidden. -->
+                  <tr class="extra-row">
+                    <td>Feb 5</td>
+                    <td>Whole group</td>
+                    <td>Orientation and project questions</td>
+                    <td>
+                      <a href="materials/index.html">Project brief</a>
+                    </td>
+                    <td>
+                      <span class="status status-complete">Complete</span>
+                    </td>
+                  </tr>
+
+                  <tr class="extra-row">
+                    <td>Feb 19</td>
+                    <td>Marcus</td>
+                    <td>Foundational material</td>
+                    <td>
+                      <a href="materials/week-01-notes.md">Week 1 notes</a>
+                    </td>
+                    <td>
+                      <span class="status status-complete">Complete</span>
+                    </td>
+                  </tr>
+
+                  <tr class="extra-row">
+                    <td>Feb 26</td>
+                    <td>Marcus</td>
+                    <td>
+                      The logical chain from Lemma 2.8 and 2.9 to Theorem 2.13
+                    </td>
+                    <td>
+                      <a href="materials/index.html#reading-list">Chapter 2</a>
+                    </td>
+                    <td>
+                      <span class="status status-complete">Complete</span>
+                    </td>
+                  </tr>
+
+                  <tr class="extra-row">
+                    <td>Mar 5</td>
+                    <td>Marcus</td>
+                    <td>Finish presenting Chapter 2.1</td>
+                    <td>
+                      <a href="materials/index.html#reading-list">Notes §3</a>
+                    </td>
+                    <td>
+                      <span class="status status-complete">Complete</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <label
+              for="weekly-plan-control"
+              class="weekly-plan-toggle"
+            >
+              <span class="show-text">Show remaining meetings</span>
+              <span class="hide-text">Hide remaining meetings</span>
+            </label>
           </div>
         </div>
       </section>

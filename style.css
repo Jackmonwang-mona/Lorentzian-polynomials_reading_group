@@ -768,3 +768,96 @@ footer {
     transition: none !important;
   }
 }
+
+/* Weekly plan with the first three rows visible */
+.weekly-plan {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #d8e0e8;
+  border-radius: 12px;
+}
+
+.weekly-plan > .table-wrap {
+  margin: 0;
+  overflow-x: auto;
+  border: 0;
+  border-radius: 0;
+}
+
+/* Hide rows after the first three */
+.weekly-plan-checkbox:not(:checked)
+  ~ .table-wrap
+  .extra-row {
+  display: none;
+}
+
+/* Show the remaining rows */
+.weekly-plan-checkbox:checked
+  ~ .table-wrap
+  .extra-row {
+  display: table-row;
+}
+
+/* Visually hide the checkbox but keep keyboard access */
+.weekly-plan-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* Expand/collapse button */
+.weekly-plan-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1rem;
+  color: #17324d;
+  font-weight: 700;
+  background: #f4f7fa;
+  border-top: 1px solid #d8e0e8;
+  cursor: pointer;
+}
+
+.weekly-plan-toggle:hover {
+  background: #eaf1f6;
+}
+
+.weekly-plan-toggle::after {
+  content: "＋";
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.weekly-plan-checkbox:checked
+  ~ .weekly-plan-toggle::after {
+  content: "−";
+}
+
+/* Switch the button text */
+.hide-text {
+  display: none;
+}
+
+.weekly-plan-checkbox:checked
+  ~ .weekly-plan-toggle
+  .show-text {
+  display: none;
+}
+
+.weekly-plan-checkbox:checked
+  ~ .weekly-plan-toggle
+  .hide-text {
+  display: inline;
+}
+
+.weekly-plan-checkbox:focus-visible
+  ~ .weekly-plan-toggle {
+  outline: 3px solid #2f6f9f;
+  outline-offset: -3px;
+}
