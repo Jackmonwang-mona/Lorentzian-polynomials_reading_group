@@ -8,7 +8,7 @@
 - `CSS`：负责颜色、排版和手机适配；
 - GitHub Pages：负责免费发布网页。
 
-**不需要安装 Ruby、Jekyll、Bundler 或 npm。** 根目录里的 `.nojekyll` 会让 GitHub Pages 直接发布这些静态文件。
+
 
 ---
 
