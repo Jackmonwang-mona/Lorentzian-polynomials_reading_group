@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reading-group notes on c-Rayleigh polynomials and M-convex support.">
+  <title>From c-Rayleigh Polynomials to M-Convex Support</title>
+
+  <!-- MathJax renders LaTeX written inside \(...\) and \[...\]. -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    :root {
+      --page: #f5f7fb;
+      --paper: #ffffff;
+      --text: #20283a;
+      --muted: #667085;
+      --accent: #3157c8;
+      --accent-soft: #eef2ff;
+      --border: #dce3ef;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    main {
+      width: min(820px, calc(100% - 32px));
+      margin: 48px auto;
+      padding: clamp(30px, 6vw, 64px);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--paper);
+      box-shadow: 0 14px 38px rgba(32, 40, 58, 0.08);
+    }
+
+    header {
+      margin-bottom: 38px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .label {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      line-height: 1.25;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 6vw, 50px);
+    }
+
+    .subtitle {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 20px;
+    }
+
+    section + section {
+      margin-top: 38px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 27px;
+    }
+
+    p {
+      margin: 0 0 1em;
+    }
+
+    ol,
+    ul {
+      padding-left: 1.45em;
+    }
+
+    li {
+      margin: 0.55em 0;
+    }
+
+    li > ul {
+      margin-top: 0.55em;
+    }
+
+    .framework {
+      margin: 22px 0;
+      padding: 20px 24px;
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      background: var(--accent-soft);
+    }
+
+    .framework p:last-child {
+      margin-bottom: 0;
+    }
+
+    .math-display {
+      overflow-x: auto;
+      margin: 24px 0;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fafbfe;
+      text-align: center;
+    }
+
+    mjx-container[jax="CHTML"][display="true"] {
+      overflow-x: auto;
+      overflow-y: hidden;
+      margin: 0.5em 0 !important;
+      padding: 2px 0;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding-top: 26px;
+      border-top: 1px solid var(--border);
+    }
+
+    .pdf-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 16px;
+      border-radius: 9px;
+      color: #ffffff;
+      background: var(--accent);
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .pdf-link:hover {
+      background: #2446ad;
+    }
+
+    .pdf-link:focus-visible {
+      outline: 3px solid rgba(49, 87, 200, 0.3);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 560px) {
+      body {
+        font-size: 17px;
+      }
+
+      main {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      main {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <article>
+      <header>
+        <p class="label">Lorentzian Polynomials · Reading Group Notes</p>
+        <h1>From \(c\)-Rayleigh Polynomials to \(M\)-Convex Support</h1>
+        <p class="subtitle">
+          The two-part framework for proving that \(L_n^d\) is closed.
+        </p>
+      </header>
+
+      <section>
+        <h2>General proof framework</h2>
+        <p>
+          We introduced the concept of <strong>\(c\)-Rayleigh polynomials</strong>
+          and divided the proof that \(L_n^d\) is closed into two main parts:
+        </p>
+
+        <ol>
+          <li>
+            Prove that every polynomial in \(L_n^d\) is \(c\)-Rayleigh
+            (Proposition 2.19).
+          </li>
+          <li>
+            Prove that a homogeneous \(c\)-Rayleigh polynomial has
+            \(M\)-convex support (Theorem 2.23).
+          </li>
+        </ol>
+
+        <div class="math-display">
+          \[
+            f\in L_n^d
+            \Longrightarrow
+            f\text{ is }c\text{-Rayleigh}
+            \Longrightarrow
+            \operatorname{supp}(f)\text{ is }M\text{-convex}.
+          \]
+        </div>
+      </section>
+
+      <section>
+        <h2>What we proved last week</h2>
+        <p>
+          Last week, we completed the first part of the framework. The argument
+          can be summarized as follows.
+        </p>
+
+        <ul>
+          <li>
+            In the degree-two case, if the Hessian has exactly one positive
+            eigenvalue, then the polynomial is \(1\)-Rayleigh.
+          </li>
+          <li>
+            The same idea extends to arbitrary degree and gives the
+            \(2(1-1/d)\)-Rayleigh property.
+          </li>
+          <li>
+            Therefore, it remains to prove that the Hessian of every polynomial
+            in \(L_n^d\) has exactly one positive eigenvalue
+            (Theorem 2.16(2)).
+          </li>
+        </ul>
+
+        <div class="framework">
+          <p>
+            The homotopy in Theorem 2.13 shows that
+            \(\mathring{L}_n^d\) is connected. Consequently, the number of
+            positive eigenvalues cannot change along the homotopy once we know
+            the following two facts:
+          </p>
+
+          <ul>
+            <li>
+              The Hessian is nonsingular everywhere in
+              \(\mathring{L}_n^d\) (Theorem 2.16(1)), so no eigenvalue can pass
+              through zero.
+            </li>
+            <li>
+              There is at least one polynomial in \(\mathring{L}_n^d\) whose
+              Hessian has exactly one positive eigenvalue. Proposition 2.14
+              supplies such examples: nonzero stable polynomials with
+              nonnegative coefficients have this Hessian signature.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Today's goal</h2>
+        <p>
+          We now turn to the second part of the framework. To give a slightly
+          different perspective from the paper, we will introduce a modified
+          notion called <strong>\(M^{\#}\)-convexity</strong>. It is motivated by
+          the independent sets of matroids and provides additional intuition
+          for the proof.
+        </p>
+
+        <p>
+          We will then use an elegant minimal-counterexample argument to prove
+          that the support is \(M\)-convex, completing the second part of the
+          framework.
+        </p>
+      </section>
+
+      <footer>
+        <!-- Replace week-XX-notes.pdf with the PDF path for the corresponding week. -->
+        <a class="pdf-link" href="week-05-notes.pdf" target="_blank" rel="noopener">
+          View this week's notes (PDF) <span aria-hidden="true">↗</span>
+        </a>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
