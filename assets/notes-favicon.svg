@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Mathematical notes</title>
+  <desc id="desc">A sheet of notes with a folded corner, text lines, and a mathematical curve.</desc>
+
+  <!-- Dark academic-blue tile: stays visible in both light and dark browser themes. -->
+  <rect x="3" y="3" width="58" height="58" rx="15" fill="#10364a"/>
+  <rect x="3.75" y="3.75" width="56.5" height="56.5" rx="14.25"
+        fill="none" stroke="#69d3c7" stroke-opacity="0.46" stroke-width="1.5"/>
+
+  <!-- Note page -->
+  <path d="M17 10h23l9 9v35H17z" fill="#f8fffe"/>
+  <path d="M40 10v9h9z" fill="#9de4dc"/>
+  <path d="M40 10v9h9" fill="none" stroke="#10364a" stroke-opacity="0.2" stroke-width="1.5"/>
+
+  <!-- Written notes -->
+  <path d="M23 27h19M23 34h15" fill="none" stroke="#2a5968" stroke-width="2.7" stroke-linecap="round"/>
+
+  <!-- A compact mathematical trace; the gold endpoint remains legible at 16 px. -->
+  <path d="M23 47c3.2-7.5 6.5-7.5 9.5 0s6.3 7.5 10-1.5"
+        fill="none" stroke="#dcae45" stroke-width="2.8" stroke-linecap="round"/>
+  <circle cx="42.5" cy="45.5" r="2.3" fill="#dcae45"/>
+</svg>
