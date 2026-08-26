@@ -205,6 +205,193 @@
         color: #b42318;
         font-weight: 700;
     }
+    /* ==================================================
+   Mathematical environments
+   ================================================== */
+
+    .math-box {
+      --math-accent: #1d4ed8;
+      --math-border: #bfdbfe;
+      --math-background: #eff6ff;
+      --math-heading-background: #dbeafe;
+
+      margin: 1.5rem 0;
+      overflow: hidden;
+
+      color: #1e293b;
+      line-height: 1.7;
+
+      background: var(--math-background);
+      border: 1px solid var(--math-border);
+      border-left: 5px solid var(--math-accent);
+      border-radius: 10px;
+
+      box-shadow: 0 2px 8px rgb(15 23 42 / 6%);
+    }
+
+    /* 标题区域 */
+    .math-box__heading {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.35rem;
+
+      padding: 0.75rem 1rem;
+
+      background: var(--math-heading-background);
+      border-bottom: 1px solid var(--math-border);
+    }
+
+    /* Definition、Theorem 等文字 */
+    .math-box__label {
+      color: var(--math-accent);
+      font-weight: 700;
+    }
+
+    /* 定理名称，例如 (M-convex support) */
+    .math-box__name {
+      color: #334155;
+      font-weight: 600;
+    }
+
+    /* 正文区域 */
+    .math-box__body {
+      padding: 1rem 1.15rem;
+    }
+
+    /* 删除正文第一段和最后一段多余的空白 */
+    .math-box__body > :first-child {
+      margin-top: 0;
+    }
+
+    .math-box__body > :last-child {
+      margin-bottom: 0;
+    }
+
+    /* 列表样式 */
+    .math-box__body ol,
+    .math-box__body ul {
+      margin: 0.8rem 0 0;
+      padding-left: 1.8rem;
+    }
+
+    .math-box__body li {
+      padding-left: 0.25rem;
+    }
+
+    .math-box__body li + li {
+      margin-top: 0.65rem;
+    }
+
+    /* 防止较长公式在手机上超出定理框 */
+    .math-box mjx-container[display="true"] {
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-bottom: 0.25rem;
+    }
+
+
+    /* ==================================================
+      不同的数学环境
+      ================================================== */
+
+    /* Definition：绿色 */
+    .math-box--definition {
+      --math-accent: #0f766e;
+      --math-border: #99f6e4;
+      --math-background: #f0fdfa;
+      --math-heading-background: #ccfbf1;
+    }
+
+    /* Theorem、Proposition、Lemma、Corollary：蓝色 */
+    .math-box--theorem,
+    .math-box--proposition,
+    .math-box--lemma,
+    .math-box--corollary {
+      --math-accent: #1d4ed8;
+      --math-border: #bfdbfe;
+      --math-background: #eff6ff;
+      --math-heading-background: #dbeafe;
+    }
+
+    /* Example：紫色 */
+    .math-box--example {
+      --math-accent: #7c3aed;
+      --math-border: #ddd6fe;
+      --math-background: #f5f3ff;
+      --math-heading-background: #ede9fe;
+    }
+
+    /* Remark：橙色 */
+    .math-box--remark {
+      --math-accent: #b45309;
+      --math-border: #fde68a;
+      --math-background: #fffbeb;
+      --math-heading-background: #fef3c7;
+    }
+
+
+    /* ==================================================
+      Proof environment
+      ================================================== */
+
+    .math-proof {
+      margin: 1.25rem 0;
+      padding: 1rem 1.15rem;
+
+      color: #334155;
+      line-height: 1.7;
+
+      background: #f8fafc;
+      border-left: 3px solid #64748b;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .math-proof__label {
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    .math-proof > :first-child {
+      margin-top: 0;
+    }
+
+    .math-proof > :last-child {
+      margin-bottom: 0;
+    }
+
+    .math-proof__qed {
+      margin-top: 0.5rem;
+      color: #0f172a;
+      font-size: 1.1rem;
+      line-height: 1;
+      text-align: right;
+    }
+
+
+    /* ==================================================
+      Mobile layout
+      ================================================== */
+
+    @media (max-width: 600px) {
+      .math-box {
+        margin: 1.2rem 0;
+        border-radius: 8px;
+      }
+
+      .math-box__heading {
+        padding: 0.7rem 0.85rem;
+      }
+
+      .math-box__body {
+        padding: 0.85rem;
+      }
+
+      .math-box__body ol,
+      .math-box__body ul {
+        padding-left: 1.5rem;
+      }
+    }
   </style>
 </head>
 
