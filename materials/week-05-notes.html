@@ -208,105 +208,30 @@
     <article>
       <header>
         <p class="label">Lorentzian Polynomials · Notes for directed study</p>
-        <h1>From \(c\)-Rayleigh Polynomials to \(M\)-Convex Support</h1>
+        <h1>Proof of Theorem 2.23 (continued)</h1>
         <p class="subtitle">
-          The two-part framework for proving that \(L_n^d\) is closed.
+          This week's event is hosted by Ivy Liu.
         </p>
       </header>
 
       <section>
-        <h2>General proof framework</h2>
+        <h2>Overall Goal</h2>
         <p>
-          We introduced the concept of <strong>\(c\)-Rayleigh polynomials</strong>
-          and divided the proof that \(L_n^d\) is closed into two main parts:
+          The main objective across these two talks is 
+          to prove that the set \(L_n^d\) is closed, which, combined with the previous theorem presented by Marcus, 
+          ultimately proves that the closure of the strictly Lorentzian polynomials \(\mathring{L}_n^d\) is exactly \(L_n^d\).
         </p>
-
-        <ol>
-          <li>
-            Prove that every polynomial in \(L_n^d\) is \(c\)-Rayleigh
-            (Proposition 2.19).
-          </li>
-          <li>
-            Prove that a homogeneous \(c\)-Rayleigh polynomial has
-            \(M\)-convex support (Theorem 2.23).
-          </li>
-        </ol>
-
-        <div class="math-display">
-          \[
-            f\in L_n^d
-            \Longrightarrow
-            f\text{ is }c\text{-Rayleigh}
-            \Longrightarrow
-            \operatorname{supp}(f)\text{ is }M\text{-convex}.
-          \]
-        </div>
       </section>
 
       <section>
-        <h2>What we proved last week</h2>
+        <h2>General content</h2>
         <p>
-          Last week, we completed the first part of the framework. The argument
-          can be summarized as follows.
-        </p>
-
-        <ul>
-          <li>
-            In the degree-two case, if the Hessian has exactly one positive
-            eigenvalue, then the polynomial is \(1\)-Rayleigh.
-          </li>
-          <li>
-            The same idea extends to arbitrary degree and gives the
-            \(2(1-1/d)\)-Rayleigh property.
-          </li>
-          <li>
-            Therefore, it remains to prove that the Hessian of every polynomial
-            in \(L_n^d\) has exactly one positive eigenvalue
-            (Theorem 2.16(2)).
-          </li>
-        </ul>
-
-        <div class="framework">
-          <p>
-            The homotopy in Theorem 2.13 shows that
-            \(\mathring{L}_n^d\) is connected. Consequently, the number of
-            positive eigenvalues cannot change along the homotopy once we know
-            the following two facts:
-          </p>
-
-          <ul>
-            <li>
-              The Hessian is nonsingular everywhere in
-              \(\mathring{L}_n^d\) (Theorem 2.16(1)), so no eigenvalue can pass
-              through zero.
-            </li>
-            <li>
-              There is at least one polynomial in \(\mathring{L}_n^d\) whose
-              Hessian has exactly one positive eigenvalue. Proposition 2.14
-              supplies such examples: nonzero stable polynomials with
-              nonnegative coefficients have this Hessian signature.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section>
-        <h2>Today's goal</h2>
-        <p>
-          We now turn to the second part of the framework. To give a slightly
-          different perspective from the paper, we will introduce a modified
-          notion called <strong>\(M^{\#}\)-convexity</strong>. It is motivated by
-          the independent sets of matroids and provides additional intuition
-          for the proof.
-        </p>
-
-        <p>
-          We will then use an elegant minimal-counterexample argument to prove
-          that the support is \(M\)-convex, completing the second part of the
-          framework.
+          Today, we continue with the second part of the framework. 
+          To offer a slightly different perspective from the paper, I will introduce a modified concept, \(M^\#\)-convexity, 
+          motivated by the independent sets of matroids, which I believe provides a stronger intuition for the proof. 
+          We will then walk through an elegant minimal counterexample argument to establish the \(M\)-convexity.
         </p>
       </section>
-
       <footer>
         <!-- Replace week-XX-notes.pdf with the PDF path for the corresponding week. -->
         <a class="pdf-link" href="week-05-notes.pdf" target="_blank" rel="noopener">
