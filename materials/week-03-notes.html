@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" 
-  content="Week 2 Notes">
-  <title>Week 2 Notes</title>
+  <!-- Edit here: description -->
+  <meta name="description" content="Week 3 Notes">
+  <title>Week 3 Notes</title>
 
   <link
     rel="icon"
@@ -207,36 +207,97 @@
 <body>
   <main>
     <article>
+      <!-- Edit here: title & subtitle  -->
       <header>
         <p class="label">Lorentzian Polynomials · Reading Group Notes</p>
-        <h1>Preliminaries in Combinatorics and Algebra</h1>
+        <h1>From Lemma 2.8 and 2.9 to Theorem 2.13</h1>
         <p class="subtitle">
           This week's event is hosted by Marcus Chen.
         </p>
       </header>
 
-      <section>
+      
+        <p>
+          I will explain the logical chain from Lemma 2.8 and 2.9 to Theorem 2.13. 
+          The key steps are the following.
+        </p>
+
+        <section>
         <h2>
-          In this week, I established the following foundational material:
-        </h2>
+          Lemma 2.8 and 2.9 to Theorem 2.13
+        </h2>        
         <ul>
           <li>
-            The basic combinatorial notation.
+            Lemma 2.8 ensures that the operator \(1 + θ w_i ∂_j\) 
+            preserves \(M\)-convex support.
           </li>
           <li>
-            The definitions of matroids, M-convex sets, supports of polynomials, and stable polynomials.
-          </li>
-          <li>
-            The definition of Lorentzian polynomials using these concepts.
-          </li>
-          <li>
-            Three illustrative examples comparing stable polynomials and Lorentzian polynomials.
+            Lemma 2.9 provides stability and interlacing properties 
+            that control how derivatives behave under this operator.
           </li>
         </ul>
+        <p>
+          Using these two lemmas, 
+          Proposition 2.7 shows that <strong>this operator preserves the Lorentzian property</strong>.
+        </p>
+        </section>
+       <!--math-display div-->
+        <!-- <div class="math-display">
+          \[
+            f\in L_n^d
+            \Longrightarrow
+            f\text{ is }c\text{-Rayleigh}
+            \Longrightarrow
+            \operatorname{supp}(f)\text{ is }M\text{-convex}.
+          \]
+        </div> -->
 
+      <section>
+        <h2>Theorem 2.10</h2>
+        <p>
+          The crucial step is Theorem 2.10, 
+          which upgrades this local operator result to invariance under general nonnegative linear changes of variables. 
+          This gives strong structural stability of the Lorentzian class. 
+          In particular, Corollary 2.11 shows that nonnegative directional derivatives preserve Lorentzian polynomials.
+        </p>
+
+
+        <!--framework div-->
+        <!-- <div class="framework">
+          <p>
+            The homotopy in Theorem 2.13 shows that
+            \(\mathring{L}_n^d\) is connected. Consequently, the number of
+            positive eigenvalues cannot change along the homotopy once we know
+            the following two facts:
+          </p>
+
+          <ul>
+            <li>
+              Item 1
+            </li>
+            <li>
+              Item 2
+            </li>
+          </ul>
+        </div> -->
+      </section>
+
+      <section>
+        <h2>Final Step</h2>
+        <p>
+          With this structure in place, Lemma 2.12 constructs a <strong>Nuij-type homotopy</strong> that pushes a Lorentzian polynomial with positive coefficients into the strictly Lorentzian region. 
+          Finally, Theorem 2.13 combines the nonnegative linear change of variables and the homotopy to show that every Lorentzian polynomial can be approximated by strictly Lorentzian ones, proving the closure result.
+        </p>
+      </section>
+
+      <section>
+        <h2>Remark</h2>
+        In the future, whenever anyone in our group would like to discuss any questions related to Lorentzian polynomials, 
+        we can simply continue the discussion on this website so that everything stays organized.
+      </section>
       <footer>
         <!-- Replace week-XX-notes.pdf with the PDF path for the corresponding week. -->
-        <a class="pdf-link" href="placeholder.pdf" target="_blank" rel="noopener">
+        <a class="pdf-link" href="week-05-notes.pdf" target="_blank" rel="noopener">
           View this week's notes (PDF) <span aria-hidden="true">↗</span>
         </a>
       </footer>
