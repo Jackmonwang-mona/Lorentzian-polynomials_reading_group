@@ -103,7 +103,7 @@ EDIT HERE
 ### 修改链接
 
 ```html
-<a href="materials/week-01-notes.md">Week 1 notes</a>
+<a href="materials/week-01.html">Week 1 notes</a>
 ```
 
 - `href="..."` 是点击后前往的位置；
