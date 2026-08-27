@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Edit here: description -->
+  <meta name="description" content="Orientation and project plan for the Lorentzian Polynomials directed study project.">
+  <title>Week 1 Notes</title>
+
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="../assets/notes-favicon.svg"
+  >
+
+  <!-- MathJax renders LaTeX written inside \(...\) and \[...\]. -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    :root {
+      --page: #f5f7fb;
+      --paper: #ffffff;
+      --text: #20283a;
+      --muted: #667085;
+      --accent: #3157c8;
+      --accent-soft: #eef2ff;
+      --border: #dce3ef;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    main {
+      width: min(820px, calc(100% - 32px));
+      margin: 48px auto;
+      padding: clamp(30px, 6vw, 64px);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--paper);
+      box-shadow: 0 14px 38px rgba(32, 40, 58, 0.08);
+    }
+
+    header {
+      margin-bottom: 38px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .label {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      line-height: 1.25;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 6vw, 50px);
+    }
+
+    .subtitle {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 20px;
+    }
+
+    section + section {
+      margin-top: 38px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 27px;
+    }
+
+    p {
+      margin: 0 0 1em;
+    }
+
+    ol,
+    ul {
+      padding-left: 1.45em;
+    }
+
+    li {
+      margin: 0.55em 0;
+    }
+
+    li > ul {
+      margin-top: 0.55em;
+    }
+
+    .framework {
+      margin: 22px 0;
+      padding: 20px 24px;
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      background: var(--accent-soft);
+    }
+
+    .framework p:last-child {
+      margin-bottom: 0;
+    }
+
+    .math-display {
+      overflow-x: auto;
+      margin: 24px 0;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fafbfe;
+      text-align: center;
+    }
+
+    mjx-container[jax="CHTML"][display="true"] {
+      overflow-x: auto;
+      overflow-y: hidden;
+      margin: 0.5em 0 !important;
+      padding: 2px 0;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding-top: 26px;
+      border-top: 1px solid var(--border);
+    }
+
+    .pdf-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 16px;
+      border-radius: 9px;
+      color: #ffffff;
+      background: var(--accent);
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .pdf-link:hover {
+      background: #2446ad;
+    }
+
+    .pdf-link:focus-visible {
+      outline: 3px solid rgba(49, 87, 200, 0.3);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 560px) {
+      body {
+        font-size: 17px;
+      }
+
+      main {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      main {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+      }
+    }
+    .key-point {
+        color: #b42318;
+        font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <article>
+      <!-- Edit here: title & subtitle  -->
+      <header>
+        <p class="label">Lorentzian Polynomials · Notes for directed study</p>
+        <h1>Orientation and project plan</h1>
+        <p class="subtitle">
+          This week's event is hosted by Botong Wang.
+        </p>
+      </header>
+
+      <p>
+         Generally speaking, the project is divided into two stages: the first stage is to read and discuss the main paper, and the second stage is to work on the project questions. The first stage will be led by Botong Wang, and the second stage will be led by all participants.
+      </p>
+      
+      <section>
+        <h2>First stage: Reading, presenting and discussing</h2>
+        <p>
+          The first main reading material is <strong>P. Brändén and J. Huh, Lorentzian polynomials, Annals of Mathematics 192 (2020), 821–891.</strong> Botong Wang introduces the geometric background behind our combinatorial object. The discussion starts from a smooth projective (or Kähler) complex surface and its Néron–Severi space.
+        </p>
+        <p>
+          A key role was played by ample divisors. Using an ample divisor, we consider the intersection pairing on the Néron–Severi space and apply the Hodge index theorem. The theorem says that the intersection form has signature \((1, \rho-1)\), where \(\rho\) is the Picard number of the surface. In particular, there is a unique positive eigenvalue. 
+        </p>
+
+        <p>
+          The main point is that this “one positive eigenvalue” phenomenon is the geometric origin of the Lorentzian condition. In this sense, the combinatorial structure we study can be viewed as an algebraic abstraction of intersection theory with respect to an ample divisor.
+        </p>
+      </section>
+      
+      <section>
+        <h2>Second stage: Project questions</h2>
+        <p>
+          The second stage is to work on the project questions. Additional reading materials will be provided as the project progresses. The project questions are designed to help participants understand the main paper and explore further directions. Participants are encouraged to work on the questions and discuss their ideas with each other.
+        </p>
+      </section>
+      <footer>
+        <!-- Replace week-XX-notes.pdf with the PDF path for the corresponding week. -->
+        <a class="pdf-link" href="placeholder.pdf" target="_blank" rel="noopener">
+          View this week's notes (PDF) <span aria-hidden="true">↗</span>
+        </a>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
