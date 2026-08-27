@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Edit here: description -->
-  <meta name="description" content="Notes for Week 0 of the Lorentzian Polynomials directed study project.">
-  <title>Week 0 Notes</title>
+  <meta name="description" content="Notes for Week 10 of the Lorentzian Polynomials directed study project.">
+  <title>Week 10 Notes</title>
 
   <link
     rel="icon"
@@ -214,88 +214,31 @@
       <!-- Edit here: title & subtitle  -->
       <header>
         <p class="label">Lorentzian Polynomials · Notes for directed study</p>
-        <h1>The title</h1>
+        <h1>The Strongest Mason Conjecture</h1>
         <p class="subtitle">
-          This week's event is hosted by name.
+          This week's event is hosted by Chengzhi.
         </p>
       </header>
 
-      <section>
-        <h2>General proof framework</h2>
-        <p>
-          Paragraph text
-        </p>
+      <p>
+        This week, we mainly discussed the Strong Mason Conjecture.
+      </p>
 
-        <ol>
-          <li>
-            First item
-          </li>
-          <li>
-            Second item
-          </li>
-        </ol>
+      <p>
+        We aimed to prove <strong>the Strongest Mason Conjecture (Theorem 4.14)</strong>, which asserts that for any matroid \(M\), the sequence of the number of independent sets of size \(k\), denoted as \(I_k(M)\), is ultra log-concave. Our main goal was to understand how to translate this purely combinatorial counting problem into a problem related to Lorentzian polynomials.
+      </p>
+      
+      <p>
+        We began with defining the homogeneous generating polynomial for independent sets \(f_M\) and then collapsed this into a bivariate polynomial where the coefficients are exactly \(I_k(M)\). If \(f_M\) is a Lorentzian polynomial, its coefficients automatically form an ultra log-concave sequence. Thus, proving the conjecture reduces entirely to proving that \(f_M\) is Lorentzian.
+      </p>
 
-       <!--math-display div-->
-        <!-- <div class="math-display">
-          \[
-            f\in L_n^d
-            \Longrightarrow
-            f\text{ is }c\text{-Rayleigh}
-            \Longrightarrow
-            \operatorname{supp}(f)\text{ is }M\text{-convex}.
-          \]
-        </div> -->
-      </section>
+      <p>
+        To prove \(f_M\) is Lorentzian, we introduced Tutte polynomial \(Z_{q, M}\) and the relation between them. Because the set of Lorentzian polynomials is closed, we only need to prove that \(Z_{q, M}\) is Lorentzian for \(0 < q \le 1\), which is Theorem 4.10.
+      </p>
 
-      <section>
-        <h2>What we proved last week</h2>
-        <p>
-          Introduction to the section.
-        </p>
-
-        <ul>
-          <li>
-            Item 1
-          </li>
-          <li>
-            Item 2
-          </li>
-          <li>
-            Item 3
-          </li>
-        </ul>
-
-        <!--framework div-->
-        <!-- <div class="framework">
-          <p>
-            The homotopy in Theorem 2.13 shows that
-            \(\mathring{L}_n^d\) is connected. Consequently, the number of
-            positive eigenvalues cannot change along the homotopy once we know
-            the following two facts:
-          </p>
-
-          <ul>
-            <li>
-              Item 1
-            </li>
-            <li>
-              Item 2
-            </li>
-          </ul>
-        </div> -->
-      </section>
-
-      <section>
-        <h2>Today's goal</h2>
-        <p>
-          Goal 1
-        </p>
-
-        <p>
-          Goal 2
-        </p>
-      </section>
-
+      <p>
+        Finally, we utilized the remarkable property that taking a partial derivative \(\partial_i\) corresponds combinatorially to the contraction of the matroid \(M/i\) and showed the Lorentzian nature of \(Z_{q, M}\) by induction.
+      </p>
       <footer>
         <!-- Replace week-XX-notes.pdf with the PDF path for the corresponding week. -->
         <a class="pdf-link" href="placeholder.pdf" target="_blank" rel="noopener">

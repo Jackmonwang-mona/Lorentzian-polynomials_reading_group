@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Edit here: description -->
-  <meta name="description" content="Notes for Week 0 of the Lorentzian Polynomials directed study project.">
-  <title>Week 0 Notes</title>
+  <meta name="description" content="Notes for Week 7 of the Lorentzian Polynomials directed study project.">
+  <title>Week 7 Notes</title>
 
   <link
     rel="icon"
@@ -214,87 +214,35 @@
       <!-- Edit here: title & subtitle  -->
       <header>
         <p class="label">Lorentzian Polynomials · Notes for directed study</p>
-        <h1>The title</h1>
+        <h1>Basics of Matroid Theory</h1>
         <p class="subtitle">
-          This week's event is hosted by name.
+          This week's event is hosted by Jackmon.
         </p>
       </header>
 
-      <section>
-        <h2>General proof framework</h2>
-        <p>
-          Paragraph text
-        </p>
+      <p>
+        For polynomials with nonnegative coefficients, we are introducing the concepts of strong and complete log-concavity. The main task for this week is proving Theorem 2.30, which offers us a new way to characterize Lorentzian polynomials.
+      </p>
 
-        <ol>
-          <li>
-            First item
-          </li>
-          <li>
-            Second item
-          </li>
-        </ol>
+      <p>
+        Theorem 2.30 tells us that for a homogeneous polynomial \(f\) with nonnegative coefficients, the following are equivalent:
+      </p>
 
-       <!--math-display div-->
-        <!-- <div class="math-display">
-          \[
-            f\in L_n^d
-            \Longrightarrow
-            f\text{ is }c\text{-Rayleigh}
-            \Longrightarrow
-            \operatorname{supp}(f)\text{ is }M\text{-convex}.
-          \]
-        </div> -->
-      </section>
+      <ul>
+        <li>
+          \(f\) is comletely log-concave.
+        </li>
+        <li>
+          \(f\) is strongly log-concave.
+        </li>
+        <li>
+          \(f\) is Lorentzian.
+        </li>
+      </ul>
 
-      <section>
-        <h2>What we proved last week</h2>
-        <p>
-          Introduction to the section.
-        </p>
-
-        <ul>
-          <li>
-            Item 1
-          </li>
-          <li>
-            Item 2
-          </li>
-          <li>
-            Item 3
-          </li>
-        </ul>
-
-        <!--framework div-->
-        <!-- <div class="framework">
-          <p>
-            The homotopy in Theorem 2.13 shows that
-            \(\mathring{L}_n^d\) is connected. Consequently, the number of
-            positive eigenvalues cannot change along the homotopy once we know
-            the following two facts:
-          </p>
-
-          <ul>
-            <li>
-              Item 1
-            </li>
-            <li>
-              Item 2
-            </li>
-          </ul>
-        </div> -->
-      </section>
-
-      <section>
-        <h2>Today's goal</h2>
-        <p>
-          Goal 1
-        </p>
-
-        <p>
-          Goal 2
-        </p>
-      </section>
+       <p>
+        We will prove the theorem using Proposition 2.33 as a lemma. By definition, we already know that (i) implies (ii). Therefore, it suffices to show that (ii) implies (iii), and (iii) implies (i). The key to proving the former is using the lemma to establish that \(f\) is \(2(1-1/d)\)-Rayleigh. For the latter, we observe that if \(f\) is Lorentzian (respectively \(logf\) is concave), \((\Sigma_{i=1}^{n}a_i\partial_i)f\) is Lorentzian (respectively \(\log(\Sigma_{i=1}^{n}a_i\partial_i)f\) is concave).
+       </p>
 
       <footer>
         <!-- Replace week-XX-notes.pdf with the PDF path for the corresponding week. -->
