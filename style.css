@@ -163,9 +163,9 @@ nav a:focus-visible {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.8fr);
-  gap: 80px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: clamp(30px, 6vw, 80px);
+  align-items: start;
 }
 
 .eyebrow,
@@ -665,12 +665,14 @@ footer {
 }
 
 @media (max-width: 900px) {
-  .hero-grid,
   .two-column {
     grid-template-columns: 1fr;
     gap: 48px;
   }
 
+  .people-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .meeting-card {
     max-width: 560px;
   }
@@ -695,6 +697,16 @@ footer {
     width: min(100% - 28px, 1120px);
   }
 
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .meeting-card {
+    width: 100%;
+    max-width: none;
+  }
+  
   .header-inner {
     min-height: auto;
     align-items: flex-start;
