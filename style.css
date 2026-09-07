@@ -873,3 +873,21 @@ footer {
   outline: 3px solid #2f6f9f;
   outline-offset: -3px;
 }
+
+/* 根据左侧文字栏的实际宽度调整标题 */
+.hero-copy {
+  min-width: 0;
+  container-type: inline-size;
+}
+
+.hero-copy .hero-title {
+  max-width: 100%;
+  font-size: min(4rem, 8cqi);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.hero-title > span {
+  display: block;
+  white-space: nowrap;
+}
