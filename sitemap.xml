@@ -1,11 +1,72 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/</loc>
   </url>
-
   <url>
     <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/Bowen-Talk-01.pdf</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/Bowen-Talk-02.pdf</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/Bowen-Talk-03.pdf</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/bounded_ratios.pdf</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/first-part.pdf</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/next-stage.html</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/second-part.pdf</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/week-01-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/week-02-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/week-03-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/week-04-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/week-05-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/week-05-notes.pdf</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/week-06-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/week-07-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/week-09-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/week-10-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/week-11-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/week-14-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/week-15-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://jackmonwang-mona.github.io/Lorentzian-polynomials_reading_group/materials/week-16-notes.html</loc>
   </url>
 </urlset>
