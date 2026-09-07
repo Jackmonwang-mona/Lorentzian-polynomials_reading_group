@@ -28,6 +28,50 @@
     <link rel="stylesheet" href="style.css">
   </head>
 
+    
+
+  <script>
+    // 显示仓库默认分支最近一次提交的日期，使用 UTC。
+    (async () => {
+      const owner = "jackmonwang-mona";
+      const repo = "Lorentzian-polynomials_reading_group";
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 8000);
+
+      try {
+        const response = await fetch(
+          `https://api.github.com/repos/${owner}/${repo}/commits?per_page=1`,
+          { signal: controller.signal }
+        );
+        if (!response.ok) return;
+
+        const commits = await response.json();
+        const timestamp = commits[0]?.commit?.committer?.date;
+        if (!timestamp) return;
+
+        const date = new Date(timestamp);
+        if (Number.isNaN(date.getTime())) return;
+
+        const time = document.getElementById("last-updated-date");
+        time.dateTime = date.toISOString();
+        time.textContent = date.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          timeZone: "UTC"
+        });
+        time.title = "Latest repository commit (UTC)";
+
+        document.getElementById("last-updated-fallback").hidden = true;
+        time.hidden = false;
+      } catch {
+        // 获取失败时，保留维护记录入口。
+      } finally {
+        clearTimeout(timeout);
+      }
+    })();
+  </script>
+
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
 
@@ -478,11 +522,22 @@
       </section>
     </main>
 
+
     <footer>
       <div class="shell footer-inner">
         <!-- EDIT HERE 12: University/project credit. -->
         <p>Lorentzian Polynomials Directed Study Project · University of Wisconsin-Madison</p>
-        <p>Built as a lightweight GitHub Pages project.</p>
+        <p id="last-updated" aria-live="polite">
+          Last updated:
+          <time id="last-updated-date" hidden></time>
+          <span id="last-updated-fallback">see maintenance history</span>
+        </p>
+        <p>
+          <a href="https://github.com/jackmonwang-mona/Lorentzian-polynomials_reading_group/commits/"
+            style="text-decoration: underline; text-underline-offset: 3px;">
+            Maintenance history &rarr;
+          </a>
+        </p>
       </div>
     </footer>
   </body>
