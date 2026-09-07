@@ -1,0 +1,27 @@
+/* Shared by the project homepage and standalone notes pages. */
+nav.breadcrumbs {
+  display: block;
+  padding-block: 18px;
+  color: #526171;
+  font-family: system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  overflow: visible;
+}
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.breadcrumbs li { display: inline; margin: 0; padding: 0; }
+.breadcrumbs .breadcrumb-separator { margin-right: 10px; color: #62707d; }
+.breadcrumbs a { color: #173b5f; padding: 0; border: 0; text-decoration: underline; text-underline-offset: 3px; }
+.breadcrumbs a:hover { color: #8f2945; }
+.breadcrumbs a:focus-visible { outline: 2px solid #173b5f; outline-offset: 4px; border-radius: 2px; }
+.breadcrumbs [aria-current="page"] { color: #17283a; overflow-wrap: anywhere; }
+@media print { nav.breadcrumbs { display: none; } }
