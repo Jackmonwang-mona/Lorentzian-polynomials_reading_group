@@ -471,6 +471,13 @@ table {
   border-collapse: collapse;
 }
 
+.weekly-plan table th:nth-child(4),
+.weekly-plan table td:nth-child(4) {
+  width: 140px;
+  min-width: 140px;
+  white-space: nowrap;
+}
+
 th,
 td {
   padding: 17px 18px;
@@ -873,6 +880,10 @@ footer {
   outline: 3px solid #2f6f9f;
   outline-offset: -3px;
 }
+
+
+
+
 
 /* 根据左侧文字栏的实际宽度调整标题 */
 .hero-copy {
